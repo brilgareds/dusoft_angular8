@@ -1,15 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 
-@Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
-})
+import { ModalService } from '../modal';
+
+@Component({ templateUrl: 'home.component.html' })
 export class HomeComponent implements OnInit {
+    bodyText: string;
 
-  constructor() { }
+    constructor(private modalService: ModalService) { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+        this.bodyText = 'This text can be updated in modal 1';
+    }
 
+    openModal(id: string) {
+        this.modalService.open(id);
+    }
+
+    closeModal(id: string) {
+        this.modalService.close(id);
+    }
 }

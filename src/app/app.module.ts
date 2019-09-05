@@ -7,6 +7,8 @@ import { AgGridModule } from 'ag-grid-angular';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
+import { StorageServiceModule } from 'ngx-webstorage-service';
+import { ModalModule } from './components/modal';
 
 @NgModule({
   declarations: [
@@ -14,13 +16,15 @@ import { HomeComponent } from './components/home/home.component';
     HomeComponent
   ],
   imports: [
-    BrowserModule,
+    ModalModule,
     AppRoutingModule,
+    BrowserModule,
     HttpClientModule,
     FormsModule,
-    AgGridModule.withComponents([])
+    AgGridModule.withComponents([]),
+    StorageServiceModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [HomeComponent]
 })
 export class AppModule { }
