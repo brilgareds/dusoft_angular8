@@ -3,8 +3,8 @@
 @import "~ag-grid-community/dist/styles/ag-theme-balham.css";
 
 .ag-theme-balham .ag-header {
-  background-color: #2b7da5;
-  color: rgb(255, 255, 255);
+  background: #337ab7;
+  color: #FFF;
 }
 .ag-theme-balham .ag-header .ag-icon {
   color: white;
@@ -17,6 +17,12 @@
 .ag-theme-balham .ag-header span {
   font-size: 16px;
 }
+
+tabs > ul > li.tabs__tab.active {
+  color: white !important;
+  background-color: #337ab7 !important;
+}
+
 html, body {
   min-height: 100vh;
   margin: 0;
@@ -30,37 +36,85 @@ body {
 }
 
 
-
-/* GLOBAL STYLES
--------------------------------*/
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 20px;
+.tabs__tab-bar {
+  align-self: start !important;
 }
 
-nav {
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #ddd;
-
-  a {
-    margin-right: 8px;
-  }
+.tabs__panel {
+  background-color: #ffffff !important;
 }
 
-h1 {
-  font-weight: normal;
-  margin-top: 0;
+.fa-md {
+  font-size: 1.5em;
 }
 
-input[type="text"] {
-  display:block;
-  width: 100%;
-  font-family: Arial, Helvetica, sans-serif;
+.btn.btn-secondary, .buttons-html5 {
+  background: #FFF;
 }
 
-.credits {
-  margin-top: 30px;
-  border-top: 1px solid #ddd;
-  text-align: center;
+.icons {
+  color: #337ab7;
+}
+
+
+table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:after {
+  top: 7px !important;
+}
+
+table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_desc:after {
+  top: -4px;
+  font-size: 1.3em;
+  font-weight: bolder;
+}
+
+table.dataTable > tbody > tr > td {
+  font-size: 12px;
+}
+
+.sorting:before, .sorting:after {
+  top: -50px;
+}
+
+table.dataTable th {
+  font-size: 12px;
+}
+
+table.dataTable td, table.dataTable th {
+  white-space: nowrap;
+  padding: 5px 18px !important;
+}
+table > thead {
+  background: #337ab7;
+  color: white;
+}
+
+table.dataTable>tbody>tr.child ul.dtr-details>li, table.dataTable>tbody>tr.child ul.dtr-details>li {
+  padding: 0;
+}
+
+table > tbody > tr:nth-child(even) td {
+  background: #f1f1f1 !important;
+}
+
+table > tbody > tr:nth-child(odd) td {
+  background: #f9f9f9 !important;
+}
+
+.dataTables_filter {
+  display: inline-block;
+}
+
+#div_buttons_table {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  color: #FFF !important;
+  background: #337ab7;
+}
+
+.paginate_button {
+  border: 1px solid #dee2e6 !important;
 }

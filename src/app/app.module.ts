@@ -4,27 +4,38 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AgGridModule } from 'ag-grid-angular';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
+
+import { ModalComponent } from './components/modal/modal.component';
 import { StorageServiceModule } from 'ngx-webstorage-service';
-import { ModalModule } from './components/modal';
+import { TabModule } from 'angular-tabs-component';
+import { DocumentosGeneradosComponent } from './components/documentosBodega/documentos-generados/documentos-generados.component';
+import { AjusteCostoComponent } from './components/documentosBodega/ajuste-costo/ajuste-costo.component';
+import { AjustarPrecioComponent } from './components/documentosBodega/ajustar-precio/ajustar-precio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ModalComponent,
+    DocumentosGeneradosComponent,
+    AjusteCostoComponent,
+    AjustarPrecioComponent
   ],
   imports: [
-    ModalModule,
-    AppRoutingModule,
     BrowserModule,
+    AppRoutingModule,
     HttpClientModule,
     FormsModule,
     AgGridModule.withComponents([]),
-    StorageServiceModule
+    StorageServiceModule,
+    TabModule,
+    NgbModule
   ],
   providers: [],
-  bootstrap: [HomeComponent]
+  bootstrap: [AjusteCostoComponent]
 })
 export class AppModule { }
